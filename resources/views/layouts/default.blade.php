@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>【ここにページごとに個別のタイトルが入ります】</title>
+    <title>@yield('title','laravel学習')</title>
     <style>
         body {
             display: grid;
@@ -57,8 +57,8 @@
     </header>
 
     <main>
-        【ここにページごとに個別のタイトルが入ります】
-        【ここにページごとに個別のコンテンツが入ります】
+        <h2>@yield('title','laravel学習')</h2>
+        <h2>@yield('content','laravel学習')</h2>
     </main>
 
     <footer>
