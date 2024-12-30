@@ -26,4 +26,9 @@ class sampleRequestController extends Controller
     public function productsArchive(Request $request, $category, $year){
         return 'カテゴリー:'.$category.'<br>年:'.$year.'<br>ページ:'.$request->get('page',1);
     }
+
+    public function routeLinks(){
+        $url = route('profile', ['id' => 1,'photos'=>'yes']);
+        return 'プロフィールページのURL:'.$url;
+    }
 }
