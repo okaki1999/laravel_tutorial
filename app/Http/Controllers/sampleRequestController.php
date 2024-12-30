@@ -18,4 +18,12 @@ class sampleRequestController extends Controller
         }
         return "キーワードは「{$keyword}」です";
     }
+
+    public function profile($id){
+        return 'ID'.$id;
+    }
+
+    public function productsArchive(Request $request, $category, $year){
+        return 'カテゴリー:'.$category.'<br>年:'.$year.'<br>ページ:'.$request->get('page',1);
+    }
 }
