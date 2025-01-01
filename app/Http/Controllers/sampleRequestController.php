@@ -20,7 +20,7 @@ class sampleRequestController extends Controller
     }
 
     public function profile($id){
-        return 'ID'.$id;
+        return 'IDは'.$id;
     }
 
     public function productsArchive(Request $request, $category, $year){
