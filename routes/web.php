@@ -29,3 +29,5 @@ Route::get('/query-strings', [sampleRequestController::class, 'queryStrings']);
 Route::get('/profile/{id}', [sampleRequestController::class, 'profile'])->name("profile"); ;
 Route::get('/productsArchive/{category}/{year}', [sampleRequestController::class, 'productsArchive']);
 Route::get('route-links', [sampleRequestController::class, 'routeLinks']);
+Route::get('/login', [sampleRequestController::class, 'loginFrom']);
+Route::post('/login', [sampleRequestController::class, 'login'])->name('login');
