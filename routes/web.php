@@ -6,7 +6,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\sampleRequestController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HiLowController;
-
+use App\Http\Controllers\PhotoController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -40,3 +40,7 @@ Route::resource('/events', EventController::class)->only([
 
 Route::get('/hi-low', [HiLowController::class, 'index'])->name('hi-low');
 Route::post('/hi-low', [HiLowController::class, 'result']);
+
+Route::resource('/photos',[PhotoController::class])->only([
+    'index','create','store'
+]);
